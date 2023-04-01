@@ -32,3 +32,13 @@ exports.getAllCS = catchAsync(async (req, res, next) => {
     },
   });
 });
+
+exports.getSingle=catchAsync(async (req,res,next)=>{
+  const CS=await ClubService.findById(req.body._id);
+  res.status(201).json({
+    status:"success",
+    theBoys:{
+      CS
+    }
+  });
+})

@@ -25,3 +25,13 @@ exports.getAllEvents = catchAsync(async (req, res, next) => {
     },
   });
 });
+
+exports.getSingleEvent=catchAsync(async(req,res,next)=>{
+  const event=await Event.findById(req.body._id);
+  res.status(201).json({
+    status:"success",
+    theBoys:{
+      event
+    },
+  })
+})

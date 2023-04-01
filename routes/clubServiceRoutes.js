@@ -5,5 +5,6 @@ const clubServiceController = require("./../controllers/clubServiceController");
 
 router.post("/insertCS", clubServiceController.insertCS);
 router.get("/getAllCS", clubServiceController.getAllCS);
+router.post("/getSingle",clubServiceController.getSingle);
 
 module.exports = router;
